@@ -1,0 +1,662 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #ffd6e7,
+        #e8d9ff
+    );
+}
+
+
+.birthday-card {
+    width: 100%;
+    max-width: 550px;
+
+    padding: 40px;
+
+    text-align: center;
+
+    background-color: white;
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.15);
+
+    animation: appear 1s ease;
+}
+
+
+.heart {
+    font-size: 60px;
+
+    margin-bottom: 10px;
+
+    animation: heartbeat 1.5s infinite;
+}
+
+
+h1 {
+    color: #ff4f87;
+
+    font-size: 45px;
+
+    margin-bottom: 10px;
+}
+
+
+h2 {
+    color: #777;
+
+    font-size: 20px;
+
+    margin-bottom: 25px;
+}
+
+
+.birthday-photo {
+    width: 250px;
+    height: 250px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 7px solid #ffd0df;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.15);
+
+    margin-bottom: 25px;
+}
+
+
+.intro {
+    color: #555;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+
+.surprise-button {
+    display: inline-block;
+
+    padding: 14px 25px;
+
+    border-radius: 30px;
+
+    background-color: #ff6b9a;
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    transition: 0.3s;
+}
+
+
+.surprise-button:hover {
+    background-color: #ff4f87;
+
+    transform: scale(1.05);
+}
+
+
+@keyframes heartbeat {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .birthday-card {
+        padding: 25px;
+    }
+
+
+    h1 {
+        font-size: 35px;
+    }
+
+
+    .birthday-photo {
+        width: 200px;
+        height: 200px;
+    }
+
+}
+
+.letter {
+    width: 100%;
+    max-width: 650px;
+
+    padding: 45px;
+
+    background-color: white;
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.15);
+
+    animation: appear 1s ease;
+}
+
+
+.letter h1 {
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+
+.letter p {
+    color: #555;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+}
+
+
+.signature {
+    margin-top: 30px;
+
+    color: #ff4f87 !important;
+
+    font-weight: bold;
+}
+
+
+.back-button {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 12px 22px;
+
+    border-radius: 25px;
+
+    background-color: #ff6b9a;
+
+    color: white;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+
+.back-button:hover {
+    background-color: #ff4f87;
+
+    transform: scale(1.05);
+}
+
+.photo-container {
+    position: relative;
+
+    width: 280px;
+    height: 280px;
+
+    margin: 0 auto 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.photo-container .birthday-photo {
+    position: relative;
+    z-index: 2;
+
+    margin: 0;
+}
+
+
+.floating-emoji {
+    position: absolute;
+
+    font-size: 28px;
+
+    z-index: 3;
+
+    pointer-events: none;
+
+    animation: floatAround 4s ease-in-out infinite;
+}
+
+
+/* Pozițiile emoji-urilor */
+
+.emoji1 {
+    top: 5px;
+    left: 10px;
+    animation-delay: 0s;
+}
+
+.emoji2 {
+    top: 20px;
+    right: 5px;
+    animation-delay: 0.5s;
+}
+
+.emoji3 {
+    top: 115px;
+    left: -15px;
+    animation-delay: 1s;
+}
+
+.emoji4 {
+    bottom: 15px;
+    left: 5px;
+    animation-delay: 1.5s;
+}
+
+.emoji5 {
+    bottom: 0;
+    right: 20px;
+    animation-delay: 2s;
+}
+
+.emoji6 {
+    top: 90px;
+    right: -15px;
+    animation-delay: 2.5s;
+}
+
+.emoji7 {
+    top: 45px;
+    left: 45px;
+    animation-delay: 3s;
+}
+
+.emoji8 {
+    bottom: 45px;
+    right: 40px;
+    animation-delay: 3.5s;
+}
+
+
+@keyframes floatAround {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    25% {
+        transform: translateY(-12px) rotate(8deg);
+    }
+
+    50% {
+        transform: translateY(5px) rotate(-8deg);
+    }
+
+    75% {
+        transform: translateY(-15px) rotate(5deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+}
+
+.game-card {
+    width: 100%;
+    max-width: 650px;
+
+    padding: 35px;
+
+    background-color: white;
+
+    border-radius: 30px;
+
+    text-align: center;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+
+.game-card h1 {
+    font-size: 35px;
+}
+
+
+.game-card p {
+    color: #666;
+
+    font-size: 18px;
+
+    margin: 15px;
+}
+
+
+#game-area {
+    position: relative;
+
+    width: 100%;
+    height: 350px;
+
+    margin-top: 20px;
+
+    border-radius: 20px;
+
+    background: linear-gradient(
+        135deg,
+        #ffe1ed,
+        #eee1ff
+    );
+
+    overflow: hidden;
+}
+
+
+#heart {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border: none;
+
+    background: none;
+
+    font-size: 45px;
+
+    cursor: pointer;
+
+    transition: transform 0.15s;
+}
+
+
+#heart:hover {
+    transform: scale(1.2);
+}
+
+
+#game-message {
+    color: #ff4f87;
+
+    font-weight: bold;
+
+    font-size: 20px;
+}
+
+
+.game-button {
+    display: block;
+
+    width: fit-content;
+
+    margin: 15px auto;
+
+    padding: 14px 25px;
+
+    border-radius: 30px;
+
+    background-color: #ff6b9a;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    transition: 0.3s;
+}
+
+
+.game-button:hover {
+    background-color: #ff4f87;
+
+    transform: scale(1.05);
+}
+
+/* =========================
+   PAGINA CU FOTOGRAFII
+========================= */
+
+.gallery-page {
+    width: 100%;
+    max-width: 900px;
+
+    padding: 40px 20px;
+
+    text-align: center;
+}
+
+
+.gallery-page h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+
+.gallery-subtitle {
+    color: #777;
+    font-size: 18px;
+
+    margin-bottom: 35px;
+}
+
+
+.photo-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+    max-width: 800px;
+
+    margin: 0 auto;
+}
+
+
+.photo {
+    height: 230px;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    background-color: white;
+
+    padding: 8px;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+    transition: 0.3s;
+}
+
+
+.photo:hover {
+    transform: scale(1.04) rotate(1deg);
+}
+
+
+.photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 14px;
+}
+
+
+/* Facem câteva poze puțin diferite */
+
+.photo1 {
+    transform: rotate(-2deg);
+}
+
+.photo2 {
+    transform: rotate(2deg);
+}
+
+.photo3 {
+    transform: rotate(-1deg);
+}
+
+.photo4 {
+    transform: rotate(2deg);
+}
+
+.photo5 {
+    transform: rotate(-2deg);
+}
+
+
+.love-text {
+    margin-top: 45px;
+
+    font-size: 32px;
+
+    font-weight: bold;
+
+    color: #ff4f87;
+
+    letter-spacing: 3px;
+
+    animation: lovePulse 2s infinite;
+}
+
+
+.gallery-button {
+    display: inline-block;
+
+    margin-top: 30px;
+
+    padding: 13px 25px;
+
+    border-radius: 30px;
+
+    background-color: #ff6b9a;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    transition: 0.3s;
+}
+
+
+.gallery-button:hover {
+    background-color: #ff4f87;
+
+    transform: scale(1.05);
+}
+
+
+@keyframes lovePulse {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .photo {
+        height: 180px;
+    }
+
+    .gallery-page h1 {
+        font-size: 32px;
+    }
+
+    .love-text {
+        font-size: 24px;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .photo-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
