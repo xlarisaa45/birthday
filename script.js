@@ -7,3 +7,5 @@ button.addEventListener("click", function() {
         "Ești una dintre cele mai importante persoane pentru mine! 💗 La mulți ani! 🎂✨";
 
 });
+
+const parolaCorecta = "1234";
